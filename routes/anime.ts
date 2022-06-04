@@ -1,11 +1,13 @@
 
 import express, { 
   Router, Request, 
-  Response } from 'express';
+  Response 
+} from 'express';
 
 import Tioanime_scraper, {
   AnimeInfo, TioanimeError, 
-  AnimeLinks } from 'tioanime-scraper-beta';
+  AnimeLinks
+} from 'tioanime-scraper-beta';
 
 const router: Router = express.Router();
 
@@ -31,6 +33,7 @@ router.get('/:id/chapter/:chapter', async (req:Request, res:Response) => {
 
   res.json(items).end();
 
-})
+});
+
 
 export default router;
