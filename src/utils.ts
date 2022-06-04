@@ -1,4 +1,12 @@
 
+function handlerParseQuery(elem:any): string[] {
+  if( (typeof elem === 'string') || Array.isArray(elem) ){
+    return (typeof elem === 'string')? [elem] : elem;
+  } else {
+    return [];
+  }
+}
+
 const genres: string[] = [
   'accion', 'artes-marciales', 'aventuras', 'carreras',
   'ciencia-ficcion', 'comedia', 'demencia', 'demonios',
@@ -10,8 +18,9 @@ const genres: string[] = [
   'superpoderes', 'suspenso', 'terror', 'vampiros', 'yaoi', 'yuri'
 ];
 
-const types: string[] = ['tv', 'ova', 'special', 'movie']
+const types: string[] = ['tv', 'ova', 'special', 'movie'];
 
 export {
-  types, genres
+  types, genres,
+  handlerParseQuery
 }

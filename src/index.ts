@@ -14,6 +14,8 @@ const PORT: number | string = process.env.PORT || 3001;
 
 const app: Application = express();
 
+app.use(['/api/filters', '/api/filter'], routes.anime_filter);
+
 app.use(['/api/anime', '/api/animes'], routes.anime);
 
 app.use(['/api/latest', '/api/latests'], routes.anime_latest);
