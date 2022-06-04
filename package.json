@@ -5,8 +5,8 @@
   "main": "build/index.js",
   "type": "module",
   "scripts": {
-    "dev": "rm -rf && tsc && nodemon build/src/index.js",
-    "app": "rm -rf && tsc && node build/src/index.js"
+    "dev": "tsc && nodemon build/src/index.js",
+    "app": "tsc && node build/src/index.js"
   },
   "keywords": [],
   "author": "",
