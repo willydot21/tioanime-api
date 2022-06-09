@@ -17,8 +17,9 @@ router.get('/', async (req:Request, res:Response) => {
   const {
     type, genre,
     year, status,
-    sort, page
+    sort, p
   } = req.query;
+  // p is page.
 
   const filters: Filters = {
     types: handlerParseQuery(type),
@@ -26,7 +27,7 @@ router.get('/', async (req:Request, res:Response) => {
     years: handlerParseQuery(year),
     status: (typeof status === 'string')? status : '',
     sort: (typeof sort === 'string')? sort : '',
-    page: (typeof page === 'string')? (parseInt(page) || 1): 1
+    page: (typeof p === 'string')? (parseInt(p) || 1): 1
   }
   
   const items: FiltersResult | TioanimeError = await Tioanime_scraper.getAnimesFromFilters(filters);

@@ -29,7 +29,7 @@ router.get('/:category', async (req:Request, res:Response) => {
 
   const type: string = (typeof req.query.type === 'string')? req.query.type:'';
 
-  const page = req.query.page;
+  const page = req.query.p; // page
 
   const pg: number = (typeof page === 'string')? parseInt(page || '1'): 1;
 

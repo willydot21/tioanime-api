@@ -13,13 +13,15 @@ const router: Router = express.Router();
 
 router.get('/', async (req: Request, res: Response) => {
 
-  const {title, page} =  req.query;
+  const {q, p} =  req.query;
+  // q , is title query (string)
+  // p, is page (number)
 
-  if( (typeof title === 'string') || (title === undefined) ) {
+  if( (typeof q === 'string') || (q === undefined) ) {
     
-    const query_title: string = title? title: '';
+    const query_title: string = q? q: '';
 
-    const pg: number = (typeof page === 'string')? parseInt(page ||'1'):1;
+    const pg: number = (typeof p === 'string')? parseInt(p ||'1'):1;
 
     const items: TioanimeError | AnimeSearch = await Tioanime_scraper.getByQuery(
       query_title, pg
