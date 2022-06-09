@@ -7,7 +7,7 @@ import express, {
 import Tioanime_scraper, {
   AnimeInfo, TioanimeError, 
   AnimeLinks
-} from 'tioanime-scraper-beta';
+} from 'tioanime-scraper-v1';
 
 const router: Router = express.Router();
 

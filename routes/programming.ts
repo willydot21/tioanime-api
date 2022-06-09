@@ -1,7 +1,7 @@
 
 import Tioanime_scraper, {
   TioanimeError, AnimeProgramming
-} from "tioanime-scraper-beta";
+} from "tioanime-scraper-v1";
 
 import express, {
   Request, Response, Router

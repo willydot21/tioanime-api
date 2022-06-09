@@ -26,6 +26,6 @@
     "express": "^4.18.1",
     "jsdom": "^19.0.0",
     "node-fetch": "^3.2.4",
-    "tioanime-scraper-beta": "^1.0.11"
+    "tioanime-scraper-v1": "^0.0.12"
   }
 }

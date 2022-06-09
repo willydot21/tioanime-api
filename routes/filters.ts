@@ -2,7 +2,7 @@
 import Tioanime_scraper, {
   TioanimeError, FiltersResult,
   Filters 
-} from "tioanime-scraper-beta";
+} from "tioanime-scraper-v1";
 
 import {handlerParseQuery} from "../src/utils.js";
 

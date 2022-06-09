@@ -2,7 +2,7 @@
 import Tioanime_scraper, {
   AnimeSearch,
   TioanimeError
-} from "tioanime-scraper-beta";
+} from "tioanime-scraper-v1";
 
 import express, {
   Request, Response,

@@ -2,7 +2,7 @@
 import Tioanime_scraper, {
   TioanimeError, AnimeAllLatest,
   ArticleItem, SectionItem
-} from 'tioanime-scraper-beta';
+} from 'tioanime-scraper-v1';
 
 import express, { 
   Router, Request, 
