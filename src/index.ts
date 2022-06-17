@@ -1,4 +1,5 @@
 
+import cors from 'cors';
 import express, {Application} from 'express';
 import {Response} from 'express';
 import dotenv from 'dotenv';
@@ -13,6 +14,8 @@ dotenv.config({
 const PORT: number | string = process.env.PORT || 3001;
 
 const app: Application = express();
+
+app.use(cors());
 
 app.use(['/api/filters', '/api/filter'], routes.anime_filter);
 
