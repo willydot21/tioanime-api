@@ -27,11 +27,16 @@ router.get('/:id/chapter/:chapter', async (req:Request, res:Response) => {
 
   const chapter: string = req.params.chapter;
 
-  const items: AnimeLinks | TioanimeError = await Tioanime_scraper.getAnimeChapter(
-    _id, parseInt(chapter)
-  );
+  try {
 
-  res.json(items).end();
+    const items: AnimeLinks | TioanimeError = await Tioanime_scraper.getAnimeChapter(
+      _id, parseInt(chapter)
+    );
+      
+    res.json(items).end();
+
+  } 
+  catch (err) { console.log(err); }
 
 });
 
