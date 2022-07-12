@@ -30,7 +30,7 @@ app.use('/api/category', routes.category);
 app.use('/api/programming', routes.programming);
 
 app.use((_req, res: Response, _next) => {
-  res.json({error:{ message:'Url is not found.' }).status(404).end();
+  res.json({error:{ message:'Url is not found.' }}).status(404).end();
 })
 
 app.listen( PORT, () => { 
